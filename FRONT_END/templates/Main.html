@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <title>World Covid Data- Home</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}" />
+  <link rel="shortcut icon" href="../static/images/covid19.ico" type="image/x-icon">
+</head>
+
+<body>
+  <ul class="nav justify-content-end">
+    <li class="nav-item">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/country">Countries</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/login-enter">Login</a>
+    </li>
+  </ul>
+  <div class ="container">
+    <div class ="row">
+      <div class = "col">
+        <div class="card" >
+          <div class="card-body">
+            <h5 class="card-title"><center><h3>Total Death<br>{{death.0}}</h3></center></h5>
+            <p class="card-text">New Deaths     :  {{death.2}}</p>
+            <p class="card-text">Deaths per 100000    :  {{death.1}}</p>
+          </div>
+        </div>
+      </div>
+      <div class = "col">
+        <div class="card" >
+          <div class="card-body">
+            <h5 class="card-title"><center><h3>Total Cases<br>{{case.0}}</h3></center></h5>
+            <p class="card-text">New Cases         :  {{case.2}}</p>
+            <p class="card-text">Cases per 100000  :  {{case.1}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="top">
+    <div class="case">
+      <p>Top 5 Worst Country By Case</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Country</th>
+            <th>Cases</th>
+          </tr>
+          {% for i in T5C %}
+          <tr>
+            <td>{{i.0}}</td>
+            <td>{{i.1}}</td>
+          </tr>
+          {% endfor %}
+        </thead>
+      </table>
+    </div>
+    <div class="death">
+      <p>Top 5 Worst Country By Death</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Country</th>
+            <th>Deaths</th>
+          </tr>
+          {% for i in T5D %}
+          <tr>
+            <td>{{i.0}}</td>
+            <td>{{i.1}}</td>
+          </tr>
+          {% endfor %}
+        </thead>
+      </table>
+    </div>
+  </div>
+  <p class="he">Stats For World Region</p>
+  <div class="accordion" id="accordionExample">
+    {% for i in who %}
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{loop.index}}"
+          aria-expanded="true" aria-controls="collapseOne">
+          {{i.0}}
+        </button>
+      </h2>
+      <div id="collapse{{loop.index}}" class="accordion-collapse collapse" aria-labelledby="heading{{loop.index}}"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <br>
+          <p class="d1">Total Case : {{i.1}}</p>
+          <p class="d1">Total death : {{i.2}}</p>
+          <p class="d1">case last : {{i.3}}</p>
+          <p class="d1">death last : {{i.4}}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <br>
+</body>
+
+</html>

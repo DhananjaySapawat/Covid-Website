@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .log{
+    position : absolute;
+    top:0px;
+      right:60px;
+      width:200px;
+  }
+  .log p{
+    padding:10px;
+      position : relative;
+      bottom:45px;
+      text-align: center;
+      font-size: 40px;
+      background-color: gray;
+  }
+  .nav {
+    width: 100%;
+    height: 60px;
+    background-color: black ;
+    position: relative;
+    bottom:20px;
+    
+  }
+  
+  .nav a {
+    color: white;
+    float: right;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 25px;
+    position: relative;
+    right: 150px;
+  }
+  .main {
+    background-color: green;
+  }
+  .top{
+   height :450px;
+   margin: auto;
+   padding: 10px;
+   display: flex;
+  }
+  .case {
+      width: 50%;
+      float :left;
+      padding: 20px;
+     
+  }
+  .top div p{
+   text-align: center;
+    position: relative;
+    right: 70px;
+  }
+  .death {
+      width: 50%;
+      float: right;
+      padding: 20px;
+     
+  }
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+  }
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  .region{
+   width: 100%;
+   height :1400px;
+   border:solid;
+  }
+  .he{
+  font-size:60px;
+  }
+  .region div:nth-child(odd){
+    position:relative;
+    left:75px;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    margin-top: 30px;
+    
+    width :40%;
+    height :400px;
+    background-color: #dddddd;
+    
+  }
+  .region div:nth-child(even){
+    display: flex;
+    position:relative;
+    right:75px;
+    flex-direction: column;
+    float: right;
+    margin-top:30px;
+    width :40%;
+    height :400px;
+    background-color: #dddddd;
+  }
+  .reg{
+     position:relative;
+     top:-50px;
+     left:5px;
+     font-size : 60px;
+  }
+  .d1{
+     
+     position:relative;
+     top:-30px;
+     margin-top:0px;
+     margin-left: auto; 
+     margin-right: 10px;
+     font-size : 30px;
+  }
+  .global {
+   margin-bottom:10px;
+   height : 400px;
+   width: 100%;
+   border:solid;
+  }
+  .global {
+   
+   height : 400px;
+   width: 100%;
+   border:solid;
+  }
+    
+  .glodeath{
+    right:75px;
+    flex-direction: column;
+    float: left;
+    width :40%;
+    height :400px;
+    margin-left:5%;
+    background-color: #dddddd;
+    
+  }
+  .glocase{
+  margin-right:5%;
+    right:75px;
+    float: right;
+    width :40%;
+    height :400px;
+    background-color: #dddddd;
+  }
+  .global div .total{
+   font-size :60px;
+   width :100%;
+   margin-bottom: 30px;
+   text-align:center;
+   margin-top: -20px;
+   position:relative;
+   top:40px;
+  }
+  .global div .las1{
+   background-color:red;
+   width :50%;
+   float:left;
+   font-size:35px;
+   margin-top: -10px;
+   text-align:center;
+    position:relative;
+   top:70px;
+  }
+  .global div .las2{
+   background-color:red;
+   width :50%;
+   float:right;
+   font-size:35px;
+   margin-top: -10px;
+   text-align:center;
+   position:relative;
+   top:70px;
+  }
